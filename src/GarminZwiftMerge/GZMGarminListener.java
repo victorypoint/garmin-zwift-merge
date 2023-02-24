@@ -153,20 +153,22 @@ public class GZMGarminListener implements MesgListener, MesgDefinitionListener {
 
                 // update the selected Garmin fields
                 // elevation
-                mesg.setFieldValue(RecordMesg.AltitudeFieldNum, altitude);
-                mesg.setFieldValue(RecordMesg.EnhancedAltitudeFieldNum, altitude);
+                //mesg.setFieldValue(RecordMesg.AltitudeFieldNum, altitude);
+                //mesg.setFieldValue(RecordMesg.EnhancedAltitudeFieldNum, altitude);
                 // distance
-                mesg.setFieldValue(RecordMesg.DistanceFieldNum, _totDist);
+                //mesg.setFieldValue(RecordMesg.DistanceFieldNum, _totDist);
                 // location
                 mesg.setFieldValue(RecordMesg.PositionLatFieldNum, record.get(RecordMesg.PositionLatFieldNum));
                 mesg.setFieldValue(RecordMesg.PositionLongFieldNum, record.get(RecordMesg.PositionLongFieldNum));
                 // speed
-                mesg.setFieldValue(RecordMesg.SpeedFieldNum, speed);
-                mesg.setFieldValue(RecordMesg.EnhancedSpeedFieldNum, speed);
+                //mesg.setFieldValue(RecordMesg.SpeedFieldNum, speed);
+                //mesg.setFieldValue(RecordMesg.EnhancedSpeedFieldNum, speed);
 
                 _lastAlt = altitude;
                 _lastTime = timestamp;
                 break;
+
+            /* ignore ...
 
             case MesgNum.LAP:
 
@@ -224,6 +226,8 @@ public class GZMGarminListener implements MesgListener, MesgDefinitionListener {
                 if(manufacturer != Manufacturer.GARMIN)
                     throw new GZMRuntimeException(GarminZwiftMerge.ERR_MSG_MANUFACTURER_GARMIN);      
                 break;
+
+            ... ignore */
 
             default:
                 break;                     
