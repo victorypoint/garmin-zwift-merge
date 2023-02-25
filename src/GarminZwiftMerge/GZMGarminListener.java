@@ -151,6 +151,7 @@ public class GZMGarminListener implements MesgListener, MesgDefinitionListener {
                 if(speed > _maxSpd) _maxSpd = speed;
                 if(speed > _maxLapSpd) _maxLapSpd = speed;
 
+                // *** update only location fields ***
                 // update the selected Garmin fields
                 // elevation
                 //mesg.setFieldValue(RecordMesg.AltitudeFieldNum, altitude);
@@ -168,66 +169,65 @@ public class GZMGarminListener implements MesgListener, MesgDefinitionListener {
                 _lastTime = timestamp;
                 break;
 
-            /* ignore ...
-
-            case MesgNum.LAP:
+            // *** skip this table ***
+            //case MesgNum.LAP:
 
                 // calculate lap values
-                int lapTime = _lastTime - _lapTime;
-                Double lapDist = _totDist - _lapDist;
+                //int lapTime = _lastTime - _lapTime;
+                //Double lapDist = _totDist - _lapDist;
 
                 // update the selected Garmin fields
                 // elevation
-                mesg.setFieldValue(LapMesg.TotalAscentFieldNum, _lapAscent);
-                mesg.setFieldValue(LapMesg.TotalDescentFieldNum, _lapDescent);
+                //mesg.setFieldValue(LapMesg.TotalAscentFieldNum, _lapAscent);
+                //mesg.setFieldValue(LapMesg.TotalDescentFieldNum, _lapDescent);
                 // distance
-                mesg.setFieldValue(LapMesg.TotalDistanceFieldNum, lapDist);
+                //mesg.setFieldValue(LapMesg.TotalDistanceFieldNum, lapDist);
                 // speed
-                mesg.setFieldValue(LapMesg.AvgSpeedFieldNum, lapDist / lapTime);
-                mesg.setFieldValue(LapMesg.MaxSpeedFieldNum, _maxLapSpd);
-                mesg.setFieldValue(LapMesg.EnhancedAvgSpeedFieldNum, lapDist / lapTime);
-                mesg.setFieldValue(LapMesg.EnhancedMaxSpeedFieldNum, _maxLapSpd);                            
+                //mesg.setFieldValue(LapMesg.AvgSpeedFieldNum, lapDist / lapTime);
+                //mesg.setFieldValue(LapMesg.MaxSpeedFieldNum, _maxLapSpd);
+                //mesg.setFieldValue(LapMesg.EnhancedAvgSpeedFieldNum, lapDist / lapTime);
+                //mesg.setFieldValue(LapMesg.EnhancedMaxSpeedFieldNum, _maxLapSpd);                            
                 // time
-                mesg.setFieldValue(LapMesg.TotalElapsedTimeFieldNum, lapTime);
-                mesg.setFieldValue(LapMesg.TotalTimerTimeFieldNum, lapTime);
+                //mesg.setFieldValue(LapMesg.TotalElapsedTimeFieldNum, lapTime);
+                //mesg.setFieldValue(LapMesg.TotalTimerTimeFieldNum, lapTime);
                 // set virtual
-                mesg.setFieldValue(LapMesg.SubSportFieldNum, VIRTUAL_ACTIVITY);
+                //mesg.setFieldValue(LapMesg.SubSportFieldNum, VIRTUAL_ACTIVITY);
 
-                _lapAscent = _lapDescent = _maxLapSpd = 0.0;
-                _lapTime = _lastTime;
-                _lapDist = _totDist;
-                break;
+                //_lapAscent = _lapDescent = _maxLapSpd = 0.0;
+                //_lapTime = _lastTime;
+                //_lapDist = _totDist;
+                //break;
 
-            case MesgNum.SESSION:
+            // *** skip this table ***
+            //case MesgNum.SESSION:
 
-                int elapsedTime = _lastTime - _startTime;
+                //int elapsedTime = _lastTime - _startTime;
                 // update the selected Garmin fields
                 // elevation
-                mesg.setFieldValue(SessionMesg.TotalAscentFieldNum, _ascent);
-                mesg.setFieldValue(SessionMesg.TotalDescentFieldNum, _descent);
+                //mesg.setFieldValue(SessionMesg.TotalAscentFieldNum, _ascent);
+                //mesg.setFieldValue(SessionMesg.TotalDescentFieldNum, _descent);
                 // speed
-                mesg.setFieldValue(SessionMesg.AvgSpeedFieldNum, _totDist / elapsedTime);
-                mesg.setFieldValue(SessionMesg.MaxSpeedFieldNum, _maxSpd);
-                mesg.setFieldValue(SessionMesg.EnhancedAvgSpeedFieldNum, _totDist / elapsedTime);
-                mesg.setFieldValue(SessionMesg.EnhancedMaxSpeedFieldNum, _maxSpd);
+                //mesg.setFieldValue(SessionMesg.AvgSpeedFieldNum, _totDist / elapsedTime);
+                //mesg.setFieldValue(SessionMesg.MaxSpeedFieldNum, _maxSpd);
+                //mesg.setFieldValue(SessionMesg.EnhancedAvgSpeedFieldNum, _totDist / elapsedTime);
+                //mesg.setFieldValue(SessionMesg.EnhancedMaxSpeedFieldNum, _maxSpd);
                 // distance
-                mesg.setFieldValue(SessionMesg.TotalDistanceFieldNum, _totDist);
+                //mesg.setFieldValue(SessionMesg.TotalDistanceFieldNum, _totDist);
                 // time
-                mesg.setFieldValue(SessionMesg.TotalElapsedTimeFieldNum, elapsedTime);
-                mesg.setFieldValue(SessionMesg.TotalTimerTimeFieldNum, elapsedTime);
+                //mesg.setFieldValue(SessionMesg.TotalElapsedTimeFieldNum, elapsedTime);
+                //mesg.setFieldValue(SessionMesg.TotalTimerTimeFieldNum, elapsedTime);
                 //set virtual
-                mesg.setFieldValue(SessionMesg.SubSportFieldNum, VIRTUAL_ACTIVITY);
+                //mesg.setFieldValue(SessionMesg.SubSportFieldNum, VIRTUAL_ACTIVITY);
                 
-                break;
+                //break;
                 
-            case MesgNum.FILE_ID:
+            // *** skip this table ***
+            //case MesgNum.FILE_ID:
 
-                Integer manufacturer = mesg.getFieldIntegerValue(FileIdMesg.ManufacturerFieldNum);
-                if(manufacturer != Manufacturer.GARMIN)
-                    throw new GZMRuntimeException(GarminZwiftMerge.ERR_MSG_MANUFACTURER_GARMIN);      
-                break;
-
-            ... ignore */
+                //Integer manufacturer = mesg.getFieldIntegerValue(FileIdMesg.ManufacturerFieldNum);
+                //if(manufacturer != Manufacturer.GARMIN)
+                //    throw new GZMRuntimeException(GarminZwiftMerge.ERR_MSG_MANUFACTURER_GARMIN);      
+                //break;
 
             default:
                 break;                     
