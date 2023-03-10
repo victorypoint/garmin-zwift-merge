@@ -10,5 +10,3 @@ Zmerge is a Java command-line app.
 Can be run as API or standalone from command line.
 
 Call "java -jar qz-zwift-merge.jar --help" for command line usage.
-
-Javadoc in ./dist folder
