@@ -10,9 +10,10 @@ Zmerge is a Java command-line app.
 Can be run as API or standalone from command line.
 
 Usage:
-  qz-zwift-merge.jar -g qz_file -z zwift_file [-o output_file] [-f]
 
-   -g qz_file           The QZ Fitness FIT file
+- qz-zwift-merge.jar -g qz_file -z zwift_file [-o output_file] [-f]
+
+  - -g qz_file           The QZ Fitness FIT file
 
    -g zwift_file        The Zwift FIT file
 
