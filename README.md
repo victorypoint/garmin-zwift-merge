@@ -16,7 +16,6 @@ Usage:
    - -z zwift_file        The Zwift FIT file
    - -o output_file       Specify the output file name. Defaults to the name of the first Zwift file with .merged.fit
    - -f                   Allows overwrite of existing zwift/output file. Does not allow overwrite of QZ file. Can be combined with output_file switch eg. -of
-   - Note that paths must be quoted if they contain spaces.
-   - e.g "c:\dir name\valid_path.fit" c:\dir name\invalid path.fit
+   - Note that paths must be quoted if they contain spaces. e.g "c:\dir name\valid_path.fit" c:\dir name\invalid path.fit
 
 - Call "java -jar qz-zwift-merge.jar --help" for command line usage.
