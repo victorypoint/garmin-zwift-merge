@@ -21,4 +21,4 @@ Usage:
    - Note that paths must be quoted if they contain spaces.
    - e.g "c:\dir name\valid_path.fit" c:\dir name\invalid path.fit
 
-Call "java -jar qz-zwift-merge.jar --help" for command line usage.
+- Call "java -jar qz-zwift-merge.jar --help" for command line usage.
