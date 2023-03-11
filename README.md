@@ -14,12 +14,10 @@ Usage:
 - qz-zwift-merge.jar -g qz_file -z zwift_file [-o output_file] [-f]
    - -g qz_file           The QZ Fitness FIT file
    - -z zwift_file        The Zwift FIT file
-   - -o output_file       Specify the output file name.
-                          Defaults to the name of the first Zwift file with .merged.fit
-   -f                     Allows overwrite of existing zwift/output file.
-                          Does not allow overwrite of Garmin file.
-                          Can be combined with output_file switch eg. -of
-
+   - -o output_file       Specify the output file name. Defaults to the name of the first Zwift file with .merged.fit
+   - -f                   Allows overwrite of existing zwift/output file.
+   -                      Does not allow overwrite of QZ file.
+   -                      Can be combined with output_file switch eg. -of
    - Note that paths must be quoted if they contain spaces.
    - e.g "c:\dir name\valid_path.fit" c:\dir name\invalid path.fit
 
