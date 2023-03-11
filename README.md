@@ -13,9 +13,9 @@ Usage:
 
 - qz-zwift-merge.jar -g qz_file -z zwift_file [-o output_file] [-f]
 
-  - -g qz_file           The QZ Fitness FIT file
+   -g qz_file           The QZ Fitness FIT file
 
-   -g zwift_file        The Zwift FIT file
+   -z zwift_file        The Zwift FIT file
 
    -o output_file       Specify the output file name.
                         Defaults to the name of the first Zwift file with .merged.fit
